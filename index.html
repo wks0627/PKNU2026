@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>우길산 | 울산사회복지공동모금회 아너 소사이어티</title>
+<meta name="description" content="울산사회복지공동모금회 모금사업팀 개인모금 파트장 우길산 — 아너 소사이어티 안내와 울산 회원 기록 아카이브">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ───────────────── 상단 고정 바 ───────────────── -->
+<header class="topbar" id="topbar">
+  <a class="topbar__brand" href="#hero">
+    <span class="fruit" aria-hidden="true"></span>
+    <span class="topbar__brand-text">울산사회복지공동모금회</span>
+  </a>
+  <nav class="topbar__nav">
+    <a href="#honor">아너 소사이어티</a>
+    <a href="#join">가입 안내</a>
+    <a href="#archive">울산 기록관</a>
+    <a href="#person">담당자</a>
+    <a class="topbar__cta" href="#contact">상담 문의</a>
+  </nav>
+  <button class="topbar__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ───────────────── HERO : 명예의전당 ───────────────── -->
+<section class="hero" id="hero">
+  <div class="hero__bg" role="img" aria-label="울산박물관 아너 소사이어티 명예의전당">
+    <div class="hero__colonnade" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero__vignette" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="hero__eyebrow">울산박물관 명예의전당</p>
+    <h1 class="hero__title">
+      이름을 남기는 일이 아니라<br>
+      <em>이웃을 남기는 일</em>입니다
+    </h1>
+    <p class="hero__lead">
+      울산의 아너 소사이어티는 한 사람의 결심에서 시작됩니다.<br>
+      그 결심이 어떻게 기록되고, 어떻게 이어져 왔는지를 이곳에 모았습니다.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--gold" href="#archive">울산 회원 기록 보기</a>
+      <a class="btn btn--ghost" href="#join">가입 절차 알아보기</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-text">SCROLL</span>
+  </div>
+</section>
+
+<!-- ───────────────── 한 줄 선언 ───────────────── -->
+<section class="statement reveal">
+  <p class="statement__text">
+    2007년 12월, 국내 최초의 개인 고액기부자 모임이 시작되었습니다.<br>
+    <strong>아너 소사이어티</strong>는 그 이름의 무게를 사회가 함께 기억하기 위한 약속입니다.
+  </p>
+</section>
+
+<!-- ───────────────── 전국 현황 숫자 ───────────────── -->
+<section class="figures reveal" aria-label="전국 아너 소사이어티 현황">
+  <div class="figures__grid" id="nationalFigures"></div>
+  <p class="figures__note" id="nationalNote"></p>
+</section>
+
+<!-- ───────────────── 아너 소사이어티란 ───────────────── -->
+<section class="section section--dark" id="honor">
+  <div class="section__head reveal">
+    <p class="kicker">About</p>
+    <h2 class="section__title">아너 소사이어티란</h2>
+    <p class="section__desc">
+      사랑의열매 사회복지공동모금회가 운영하는 개인 고액기부자 모임입니다.
+      기부 금액이 아니라, 기부를 선택한 이유를 기록하는 자리입니다.
+    </p>
+  </div>
+
+  <div class="pillars">
+    <article class="pillar reveal">
+      <span class="pillar__num">01</span>
+      <h3>Giving · 기부</h3>
+      <p>1억원 이상을 기부하거나, 5년 이내 납부를 약정합니다. 기부금은 지역의 복지 현장으로 배분됩니다.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__num">02</span>
+      <h3>Volunteering · 봉사</h3>
+      <p>금전적 기부에 머무르지 않고, 회원이 직접 현장을 찾아 나눔을 실천합니다.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__num">03</span>
+      <h3>Networking · 만남과 교류</h3>
+      <p>연 1회 회원의 날과 지역 클럽 활동을 통해 회원들이 서로의 나눔을 나눕니다. 전국 18개 클럽이 운영되고 있습니다.</p>
+    </article>
+  </div>
+
+  <div class="timeline reveal">
+    <h3 class="timeline__title">연혁</h3>
+    <ol class="timeline__list" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ───────────────── 가입을 고민하는 분께 ───────────────── -->
+<section class="section" id="join">
+  <div class="section__head reveal">
+    <p class="kicker">Before you decide</p>
+    <h2 class="section__title">가입을 고민하신다면</h2>
+    <p class="section__desc">
+      결정에 앞서 가장 많이 받는 질문들을 모았습니다.
+      숫자와 절차를 먼저 확인하신 뒤, 편하실 때 연락 주십시오.
+    </p>
+  </div>
+
+  <!-- 납입 방식 -->
+  <div class="ways reveal">
+    <article class="way">
+      <h3 class="way__title">일시 기부</h3>
+      <p class="way__amount">1억원 <span>이상</span></p>
+      <p class="way__desc">한 번에 기부하여 가입하는 방식입니다.</p>
+    </article>
+    <article class="way way--accent">
+      <h3 class="way__title">5년 약정</h3>
+      <p class="way__amount">연 2,000만원 <span>× 5년</span></p>
+      <p class="way__desc">
+        5년 이내 납부를 약정하는 방식입니다. 최초 가입금액 1천만원 이상,
+        이후 매년 일정 비율로 납입합니다. 대부분의 신규 회원이 선택하는 방식입니다.
+      </p>
+    </article>
+  </div>
+
+  <!-- 절차 -->
+  <div class="steps reveal">
+    <h3 class="steps__title">가입 절차</h3>
+    <ol class="steps__list">
+      <li><span class="steps__n">1</span><strong>상담</strong><em>담당자와 기부 목적·납입 방식·배분 분야를 상의합니다.</em></li>
+      <li><span class="steps__n">2</span><strong>가입서 작성</strong><em>약정 내용과 기부자 정보를 확인하고 서명합니다.</em></li>
+      <li><span class="steps__n">3</span><strong>기부금 송금</strong><em>약정한 일정에 따라 납입합니다. 기부금 영수증이 발급됩니다.</em></li>
+      <li><span class="steps__n">4</span><strong>가입식</strong><em>선택 사항입니다. 비공개 가입도 가능합니다.</em></li>
+    </ol>
+  </div>
+
+  <!-- 자주 묻는 질문 -->
+  <div class="faq reveal">
+    <h3 class="faq__title">자주 묻는 질문</h3>
+    <div class="faq__list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ───────────────── 아카이브 ───────────────── -->
+<section class="section section--archive" id="archive">
+  <div class="section__head reveal">
+    <p class="kicker">Archive</p>
+    <h2 class="section__title">울산 아너 소사이어티 기록관</h2>
+    <p class="section__desc">
+      울산 지역의 가입 현황과 약정 추이를 연도별로 열람하실 수 있습니다.
+      결정에 참고가 되도록, 해석 없이 기록만 둡니다.
+    </p>
+  </div>
+
+  <div class="archive reveal">
+    <div class="archive__tabs" role="tablist" aria-label="기록 분류">
+      <button class="archive__tab is-active" role="tab" data-panel="panel-members" aria-selected="true">가입 현황</button>
+      <button class="archive__tab" role="tab" data-panel="panel-amount" aria-selected="false">약정 금액 추이</button>
+      <button class="archive__tab" role="tab" data-panel="panel-table" aria-selected="false">연도별 원장</button>
+    </div>
+
+    <div class="archive__panel is-active" id="panel-members" role="tabpanel">
+      <p class="archive__caption">울산 누적 회원 수 (연도 말 기준)</p>
+      <div class="chart" id="chartMembers"></div>
+    </div>
+
+    <div class="archive__panel" id="panel-amount" role="tabpanel">
+      <p class="archive__caption">울산 연간 신규 약정 금액 (억원)</p>
+      <div class="chart" id="chartAmount"></div>
+    </div>
+
+    <div class="archive__panel" id="panel-table" role="tabpanel">
+      <p class="archive__caption">연도별 기록 원장</p>
+      <div class="archive__tablewrap">
+        <table class="ledger" id="ledger"></table>
+      </div>
+    </div>
+
+    <p class="archive__source" id="archiveSource"></p>
+  </div>
+</section>
+
+<!-- ───────────────── 담당자 ───────────────── -->
+<section class="section section--dark" id="person">
+  <div class="person">
+    <figure class="person__photo reveal">
+      <img src="assets/img/profile.jpg" alt="우길산 개인모금 파트장" id="profileImg">
+      <figcaption>우길산 · 개인모금 파트장</figcaption>
+    </figure>
+    <div class="person__body reveal">
+      <p class="kicker">Your contact</p>
+      <h2 class="section__title">담당자 우길산입니다</h2>
+      <p class="person__text">
+        울산사회복지공동모금회 모금사업팀에서 개인 기부를 맡고 있습니다.
+        아너 소사이어티 상담은 가입을 권하는 자리가 아니라,
+        기부하신 금액이 울산의 어디로 가는지를 끝까지 설명해 드리는 자리라고 생각합니다.
+      </p>
+      <p class="person__text">
+        금액의 크기보다 먼저 여쭙는 것이 있습니다.
+        <strong>"어떤 이웃이 가장 마음에 걸리십니까."</strong>
+        그 답에서 배분 분야를 함께 찾아갑니다. 비공개 기부도 언제든 가능합니다.
+      </p>
+      <dl class="person__meta">
+        <div><dt>소속</dt><dd>울산사회복지공동모금회 모금사업팀</dd></div>
+        <div><dt>직급</dt><dd>개인모금 파트장</dd></div>
+        <div><dt>담당</dt><dd>아너 소사이어티 · 개인 고액기부 · 유산기부 상담</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────── 문의 ───────────────── -->
+<section class="contact" id="contact">
+  <div class="contact__inner reveal">
+    <p class="kicker kicker--center">Contact</p>
+    <h2 class="contact__title">먼저 이야기부터 들려주십시오</h2>
+    <p class="contact__lead">가입 여부와 무관하게 상담만으로도 괜찮습니다.</p>
+    <div class="contact__cards">
+      <a class="ccard" href="tel:01033880470">
+        <span class="ccard__label">전화 · 문자</span>
+        <strong class="ccard__value">010-3388-0470</strong>
+        <span class="ccard__sub">평일 09:00 – 18:00</span>
+      </a>
+      <a class="ccard" href="mailto:wks0627@chest.or.kr?subject=%EC%95%84%EB%84%88%20%EC%86%8C%EC%82%AC%EC%9D%B4%EC%96%B4%ED%8B%B0%20%EC%83%81%EB%8B%B4%20%EC%9A%94%EC%B2%AD">
+        <span class="ccard__label">이메일</span>
+        <strong class="ccard__value">wks0627@chest.or.kr</strong>
+        <span class="ccard__sub">클릭하면 상담 요청 메일이 작성됩니다</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__org">울산사회복지공동모금회 모금사업팀 · 개인모금 파트장 우길산</p>
+    <p class="footer__note">
+      본 페이지는 담당자 소개 및 기부 상담 안내를 위한 비상업적 업무용 자료입니다.
+      수치는 사랑의열매 공개 자료를 인용하였으며, 공식 통계는 사랑의열매 누리집을 확인해 주십시오.
+    </p>
+    <p class="footer__links">
+      <a href="https://chest.or.kr" target="_blank" rel="noopener">사랑의열매 사회복지공동모금회</a>
+    </p>
+  </div>
+</footer>
+
+<script src="data/honor-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
