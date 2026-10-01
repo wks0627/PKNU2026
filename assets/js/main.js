@@ -277,6 +277,97 @@
       '</tr></tfoot>';
   }
 
+  /* ── 명패 월 ─────────────────────────────────────── */
+  function buildPlates() {
+    var w = D.wall || {};
+    var given = (w.plates || []).slice();
+
+    if (w.autoFill === false) return given.sort(function (a, b) { return a.no - b.no; });
+
+    // 연도별 누적 회원 수로부터 빈 명패를 자동 생성
+    var rows = (D.ulsan && D.ulsan.rows) || [];
+    if (!rows.length) return given;
+
+    var byNo = {};
+    given.forEach(function (p) { byNo[p.no] = p; });
+
+    var plates = [];
+    var no = 0;
+    var first = rows[0];
+
+    // 첫 해 이전의 누적분은 첫 해 연도로 묶습니다
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var upto = r.members;
+      while (no < upto) {
+        no++;
+        plates.push(byNo[no] || { no: no, year: r.year });
+      }
+    }
+    void first;
+    return plates;
+  }
+
+  function initWall() {
+    var grid = $('#wallGrid');
+    if (!grid) return;
+
+    var plates = buildPlates();
+    if (!plates.length) { grid.innerHTML = ''; return; }
+
+    var years = [];
+    plates.forEach(function (p) { if (years.indexOf(p.year) < 0) years.push(p.year); });
+    years.sort();
+
+    // 연도 필터 버튼
+    $('#wallFilters').innerHTML =
+      '<button class="wchip is-active" data-year="all">전체</button>' +
+      years.map(function (y) {
+        return '<button class="wchip" data-year="' + y + '">' + y + '</button>';
+      }).join('');
+
+    var state = { year: 'all', q: '' };
+
+    var render = function () {
+      var list = plates.filter(function (p) {
+        if (state.year !== 'all' && String(p.year) !== state.year) return false;
+        if (!state.q) return true;
+        var hay = p.no + ' ' + p.year + ' ' + (p.name || '');
+        return hay.indexOf(state.q) >= 0;
+      });
+
+      grid.innerHTML = list.map(function (p) {
+        var named = !!p.name;
+        return '<div class="plate' + (named ? ' plate--named' : '') + '" tabindex="0">' +
+          '<span class="plate__no">No. ' + p.no + '</span>' +
+          '<span class="plate__name">' + (named ? p.name : '비공개') + '</span>' +
+          '<span class="plate__year">' + p.year + '</span>' +
+        '</div>';
+      }).join('');
+
+      $('#wallCount').textContent =
+        '명패 ' + list.length + '장' + (list.length !== plates.length ? ' / 전체 ' + plates.length + '장' : '');
+    };
+
+    $$('.wchip', $('#wallFilters')).forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        $$('.wchip').forEach(function (c) { c.classList.remove('is-active'); });
+        chip.classList.add('is-active');
+        state.year = chip.dataset.year;
+        render();
+      });
+    });
+
+    var search = $('#wallSearch');
+    search.addEventListener('input', function () {
+      state.q = search.value.trim();
+      render();
+    });
+
+    $('#wallNote').textContent = (D.wall && D.wall.note) || '';
+    render();
+  }
+
   /* ── 아카이브 ────────────────────────────────────── */
   function initArchive() {
     var u = D.ulsan;
@@ -333,6 +424,7 @@
     renderNational();
     renderTimeline();
     renderFaq();
+    initWall();
     initArchive();
     initProfile();
     initReveal();

@@ -14,8 +14,9 @@ index.html              페이지 본문 (구조만, 숫자는 데이터에서 �
 data/honor-data.js      ★ 모든 수치·FAQ·연혁을 관리하는 파일
 assets/css/style.css    디자인
 assets/js/main.js       차트 렌더링 및 상호작용 (외부 라이브러리 없음)
-assets/img/profile.jpg  담당자 사진 (넣어야 함)
-assets/img/hall.jpg     명예의전당 배경 사진 (넣어야 함)
+assets/img/profile.jpg      담당자 사진 (넣어야 함)
+assets/img/hall-poster.jpg  첫 화면 전체를 채우는 명예의전당 포스터
+assets/img/hall.jpg         좁은 화면(모바일)용 배경 사진
 ```
 
 ## 해야 할 일
@@ -37,6 +38,21 @@ assets/img/hall.jpg     명예의전당 배경 사진 (넣어야 함)
    ```
 
 3. 연혁·FAQ 문구도 같은 파일에서 수정합니다.
+
+4. **명패 월(명예의전당) 이름 공개**
+   `data/honor-data.js` 의 `wall.plates` 에 적습니다.
+   **기부자 본인의 공개 동의를 받은 경우에만** `name` 을 채우세요.
+   `name` 이 없으면 화면에 "비공개"로 표시됩니다.
+
+   ```js
+   wall: {
+     autoFill: true,   // 적지 않은 호수는 빈 명패로 자동 생성
+     plates: [
+       { no: 1, year: 2011, name: "홍길동" },
+       { no: 2, year: 2012 }               // 비공개
+     ]
+   }
+   ```
 
 ## 보는 방법
 

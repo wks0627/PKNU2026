@@ -16,13 +16,27 @@
 
 <!-- ───────────────── 상단 고정 바 ───────────────── -->
 <header class="topbar" id="topbar">
-  <a class="topbar__brand" href="#hero">
-    <span class="fruit" aria-hidden="true"></span>
-    <span class="topbar__brand-text">울산사회복지공동모금회</span>
+  <a class="topbar__brand" href="#hero" aria-label="사랑의열매 울산사회복지공동모금회">
+    <svg class="logo" viewBox="0 0 132 44" aria-hidden="true">
+      <!-- 사랑의열매 : 세 개의 열매와 잎 -->
+      <g class="logo__berries">
+        <circle cx="21"  cy="12" r="7.6"/>
+        <circle cx="10.6" cy="19.4" r="7.6"/>
+        <circle cx="31.4" cy="19.4" r="7.6"/>
+      </g>
+      <g class="logo__leaves">
+        <path d="M21 25.5c-5.6 0-9.6 2.2-11.9 6.2 4.6 1.4 8.6.2 11.9-3.6"/>
+        <path d="M21 25.5c5.6 0 9.6 2.2 11.9 6.2-4.6 1.4-8.6.2-11.9-3.6"/>
+        <path d="M21 26v10.5"/>
+      </g>
+      <text class="logo__word" x="46" y="21">사랑의열매</text>
+      <text class="logo__sub"  x="46" y="34">울산사회복지공동모금회</text>
+    </svg>
   </a>
   <nav class="topbar__nav">
     <a href="#honor">아너 소사이어티</a>
     <a href="#join">가입 안내</a>
+    <a href="#wall">명예의전당</a>
     <a href="#archive">울산 기록관</a>
     <a href="#person">담당자</a>
     <a class="topbar__cta" href="#contact">상담 문의</a>
@@ -39,9 +53,14 @@
 
 <!-- ───────────────── HERO : 명예의전당 ───────────────── -->
 <section class="hero" id="hero">
-  <div class="hero__bg" role="img" aria-label="울산박물관에 설치된 울산 아너 소사이어티 아너 명예의전당">
-    <div class="hero__scrim" aria-hidden="true"></div>
-    <div class="hero__vignette" aria-hidden="true"></div>
+  <!-- 넓은 화면: 명예의전당 원본 이미지를 그대로 배경으로 -->
+  <img class="hero__poster" src="assets/img/hall-poster.jpg"
+       alt="울산박물관에 설치된 울산 아너 소사이어티 아너 명예의전당 — 당신의 이름이 세상을 바꿉니다">
+
+  <!-- 좁은 화면: 같은 사진을 배경으로 쓰고 글자는 아래에 다시 조판 -->
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__scrim"></div>
+    <div class="hero__vignette"></div>
   </div>
 
   <div class="hero__inner">
@@ -58,10 +77,12 @@
       그 가치를 영원히 기리는 <strong>대한민국 최초의 명예의 전당</strong>입니다.
     </p>
 
-    <div class="hero__actions">
-      <a class="btn btn--gold" href="#archive">울산 회원 기록 보기</a>
-      <a class="btn btn--ghost" href="#join">가입 절차 알아보기</a>
-    </div>
+  </div>
+
+  <!-- 화면 크기와 무관하게 항상 노출되는 행동 유도 -->
+  <div class="hero__actions">
+    <a class="btn btn--gold" href="#wall">명예의전당 둘러보기</a>
+    <a class="btn btn--ghost" href="#join">가입 절차 알아보기</a>
   </div>
 
   <div class="hero__scroll" aria-hidden="true">
@@ -199,6 +220,50 @@
   <div class="faq reveal">
     <h3 class="faq__title">자주 묻는 질문</h3>
     <div class="faq__list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ───────────────── 명패 월 ───────────────── -->
+<section class="section section--wall" id="wall">
+  <div class="section__head reveal">
+    <p class="kicker">Donor Wall</p>
+    <h2 class="section__title">울산 아너 명예의전당</h2>
+    <p class="section__desc">
+      울산박물관 1층에 설치된 명패 벽을 그대로 옮겼습니다.
+      한 장의 황동 명패는 한 사람의 결심입니다.
+    </p>
+  </div>
+
+  <div class="wallbox reveal">
+    <div class="wallbox__bar">
+      <div class="wallbox__search">
+        <input type="search" id="wallSearch" placeholder="호수 또는 연도로 찾기 (예: 120, 2024)"
+               aria-label="명패 검색" autocomplete="off">
+      </div>
+      <div class="wallbox__filters" id="wallFilters" role="group" aria-label="연도 필터"></div>
+      <p class="wallbox__count" id="wallCount"></p>
+    </div>
+
+    <div class="wallbox__frame">
+      <div class="wallbox__plaque">
+        <span class="fruit" aria-hidden="true"></span>
+        <strong>울산 아너 소사이어티</strong>
+        <em>HONOR SOCIETY</em>
+        <p>
+          울산 아너 소사이어티는 나눔의 가치를 지키고
+          사회적 책임의식과 1% 이상 기부를 바탕으로
+          깊이 있는 사랑을 통해 더 밝은 내일을 여는
+          사랑의 실천입니다. 1억원 이상 개인 고액
+          기부자분들의 모임입니다.
+        </p>
+        <span class="wallbox__date">2026. 03. 30</span>
+        <span class="wallbox__org">울산사회복지공동모금회</span>
+      </div>
+
+      <div class="wallbox__grid" id="wallGrid" aria-live="polite"></div>
+    </div>
+
+    <p class="wallbox__note" id="wallNote"></p>
   </div>
 </section>
 

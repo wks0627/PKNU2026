@@ -131,6 +131,22 @@ section[id]{ scroll-margin-top:5rem; }
   background:var(--ink); color:var(--on-dark);
   overflow:hidden;
 }
+/* 원본 포스터를 통째로 배경에 — 잘리지 않게 contain,
+   여백은 사진 자체의 어두운 벽색과 같은 색으로 메웁니다 */
+.hero__poster{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:contain; object-position:center;
+  background:#241a14;
+  opacity:0; transform:scale(1.06);
+  animation:posterIn 2.2s var(--ease-out) 1.5s both;
+}
+@keyframes posterIn{
+  from{ opacity:0; transform:scale(1.06); filter:brightness(.25); }
+  to  { opacity:1; transform:scale(1);    filter:brightness(1); }
+}
+/* 포스터를 쓰는 넓은 화면에서는 HTML 로 다시 쓴 글자를 감춥니다 */
+.hero__inner{ display:none; }
+.hero__bg{ display:none; }
 .hero__bg{ position:absolute; inset:0; }
 
 /* 명예의전당 사진 — 천천히 당겨지는 시네마틱 줌 */
@@ -212,7 +228,12 @@ section[id]{ scroll-margin-top:5rem; }
 }
 .hero__lead strong{ color:var(--gold-soft); font-weight:700; }
 
-.hero__actions{ display:flex; flex-wrap:wrap; gap:.9rem; }
+.hero__actions{
+  position:absolute; z-index:3;
+  left:0; right:0; bottom:clamp(6rem,11vh,8rem);
+  display:flex; flex-wrap:wrap; justify-content:center; gap:.9rem;
+  animation-delay:3.5s;
+}
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
@@ -317,6 +338,19 @@ section[id]{ scroll-margin-top:5rem; }
   font-family:var(--serif); font-weight:700;
   font-size:1rem; letter-spacing:-.02em; white-space:nowrap;
 }
+/* 사랑의열매 로고 */
+.logo{ height:30px; width:auto; display:block; }
+.logo__berries circle{ fill:var(--fruit); }
+.logo__leaves path{ fill:none; stroke:var(--leaf); stroke-width:2.4; stroke-linecap:round; }
+.logo__word{
+  font-family:var(--serif); font-weight:900; font-size:15px;
+  letter-spacing:-.04em; fill:var(--on-dark);
+}
+.logo__sub{
+  font-family:var(--sans); font-weight:500; font-size:8.2px;
+  letter-spacing:.02em; fill:var(--gold-soft);
+}
+
 .topbar__nav{ display:flex; align-items:center; gap:1.7rem; }
 .topbar__nav a{
   text-decoration:none; font-size:.89rem; font-weight:500; letter-spacing:-.01em;
@@ -460,6 +494,135 @@ section[id]{ scroll-margin-top:5rem; }
 .faq__a{ max-height:0; overflow:hidden; transition:max-height .45s var(--ease); }
 .faq__a-inner{ padding:0 0 1.7rem 2.1rem; font-size:.97rem; color:var(--text-dim); }
 
+/* ── 명패 월 ─────────────────────────────── */
+.section--wall{
+  background:
+    radial-gradient(120% 70% at 50% 0%, #2d241c 0%, var(--stone) 45%, var(--ink) 100%);
+  color:var(--on-dark);
+}
+.section--wall .section__title{ color:var(--on-dark); }
+.section--wall .section__desc{ color:var(--on-dark-dim); }
+
+.wallbox{ max-width:var(--wrap); margin:0 auto; }
+
+.wallbox__bar{
+  display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.4rem;
+  padding-bottom:1.6rem; margin-bottom:2.2rem;
+  border-bottom:1px solid var(--line);
+}
+.wallbox__search{ flex:1 1 280px; }
+.wallbox__search input{
+  width:100%; padding:.85rem 1.1rem;
+  background:rgba(239,232,220,.05); color:var(--on-dark);
+  border:1px solid var(--line); border-radius:2px;
+  font-family:var(--sans); font-size:.92rem;
+  transition:border-color .25s, background .25s;
+}
+.wallbox__search input::placeholder{ color:#786c5e; }
+.wallbox__search input:focus{ outline:none; border-color:var(--gold); background:rgba(201,161,88,.08); }
+
+.wallbox__filters{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.wchip{
+  background:none; border:1px solid var(--line); border-radius:999px;
+  padding:.4rem .95rem; cursor:pointer;
+  font-family:var(--sans); font-size:.82rem; color:var(--on-dark-dim);
+  transition:color .25s, border-color .25s, background .25s;
+}
+.wchip:hover{ color:var(--on-dark); border-color:var(--gold); }
+.wchip.is-active{ background:var(--gold); border-color:var(--gold); color:#1a140c; font-weight:700; }
+
+.wallbox__count{
+  margin:0; font-family:var(--serif); font-weight:700;
+  font-size:.86rem; color:var(--gold-soft); white-space:nowrap;
+}
+
+/* 전시벽 틀 */
+.wallbox__frame{
+  display:grid; gap:1.6rem;
+  grid-template-columns:minmax(0,230px) minmax(0,1fr);
+  padding:clamp(1.2rem,2.5vw,2rem);
+  background:linear-gradient(165deg, #241d16, #15110d);
+  border:1px solid rgba(201,161,88,.2);
+  box-shadow:inset 0 0 90px rgba(0,0,0,.6), 0 24px 60px rgba(0,0,0,.4);
+}
+
+/* 벽 왼쪽의 안내 동판 */
+.wallbox__plaque{
+  background:linear-gradient(170deg,#fbf6ea,#e4d8bf);
+  border:1px solid #c7b48a;
+  padding:1.6rem 1.3rem; text-align:center; color:#2a2219;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+.wallbox__plaque .fruit{ margin:0 auto .7rem; display:block; }
+.wallbox__plaque strong{
+  display:block; font-family:var(--serif); font-weight:900;
+  font-size:1.02rem; letter-spacing:-.03em;
+}
+.wallbox__plaque em{
+  display:block; font-style:normal; font-family:var(--serif);
+  font-size:.62rem; letter-spacing:.24em; color:#8a7c63; margin-top:.2rem;
+}
+.wallbox__plaque p{
+  margin:1.1rem 0 1.2rem; font-size:.74rem; line-height:1.95; color:#564a3a;
+}
+.wallbox__date, .wallbox__org{
+  display:block; font-family:var(--serif); font-size:.72rem; color:#6b5c47;
+}
+.wallbox__org{ font-weight:700; margin-top:.25rem; }
+
+/* 황동 명패 */
+.wallbox__grid{
+  display:grid; gap:7px;
+  grid-template-columns:repeat(auto-fill, minmax(118px,1fr));
+  align-content:start;
+  max-height:min(62vh, 640px); overflow-y:auto;
+  padding-right:4px;
+}
+.wallbox__grid::-webkit-scrollbar{ width:8px; }
+.wallbox__grid::-webkit-scrollbar-track{ background:rgba(0,0,0,.3); }
+.wallbox__grid::-webkit-scrollbar-thumb{ background:var(--gold-deep); border-radius:4px; }
+
+.plate{
+  position:relative; cursor:default;
+  padding:.62rem .6rem .55rem;
+  background:linear-gradient(168deg,#e8c67f 0%, #c9a158 38%, #9d7736 72%, #dcb978 100%);
+  border-top:1px solid rgba(255,245,215,.8);
+  border-bottom:1px solid rgba(60,42,16,.65);
+  box-shadow:0 2px 5px rgba(0,0,0,.5);
+  text-align:center; overflow:hidden;
+  transition:transform .25s var(--ease), box-shadow .25s, filter .25s;
+}
+.plate::after{   /* 금속 표면의 빛줄기 */
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(105deg, transparent 38%, rgba(255,250,230,.42) 50%, transparent 62%);
+  opacity:0; transition:opacity .35s;
+}
+.plate:hover, .plate:focus{
+  transform:translateY(-3px); outline:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.55);
+  filter:brightness(1.08);
+}
+.plate:hover::after, .plate:focus::after{ opacity:1; }
+
+.plate__no{
+  display:block; font-family:var(--sans); font-size:.6rem;
+  letter-spacing:.08em; color:#5c4418; opacity:.8;
+}
+.plate__name{
+  display:block; font-family:var(--serif); font-weight:900;
+  font-size:.96rem; letter-spacing:-.03em; color:#3a2a0c;
+  margin:.1rem 0 .12rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.plate:not(.plate--named) .plate__name{ color:#6b5423; font-weight:500; font-size:.84rem; }
+.plate__year{
+  display:block; font-family:var(--sans); font-size:.6rem;
+  letter-spacing:.06em; color:#5c4418; opacity:.75;
+}
+
+.wallbox__note{
+  margin:1.5rem 0 0; font-size:.8rem; line-height:1.9; color:var(--on-dark-dim);
+}
+
 /* ── 아카이브 ────────────────────────────── */
 .section--archive{ background:linear-gradient(180deg, var(--paper-2), var(--paper)); }
 .archive{ max-width:var(--wrap); margin:0 auto; }
@@ -591,6 +754,20 @@ section[id]{ scroll-margin-top:5rem; }
 @media (max-width:900px){
   .person{ grid-template-columns:1fr; }
   .person__photo{ max-width:340px; }
+
+  /* 좁은 화면에서는 포스터의 글자가 작아져 읽히지 않으므로
+     사진은 배경으로 돌리고 글자는 HTML 로 다시 조판합니다 */
+  .hero__poster{ display:none; }
+  .hero__bg{ display:block; }
+  .hero__inner{ display:block; }
+  .hero__actions{
+    position:static; justify-content:flex-start;
+    left:auto; right:auto; bottom:auto; margin-top:2.4rem;
+  }
+  .hero{ align-items:center; padding-top:8rem; padding-bottom:7rem; }
+
+  .wallbox__frame{ grid-template-columns:1fr; }
+  .wallbox__plaque{ max-width:340px; margin:0 auto; }
 }
 @media (max-width:760px){
   .topbar__toggle{ display:block; }
