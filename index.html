@@ -7,10 +7,12 @@
 <meta name="description" content="울산사회복지공동모금회 모금사업팀 개인모금 파트장 우길산 — 아너 소사이어티 안내와 울산 회원 기록 아카이브">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>body.is-loading{overflow:auto}.curtain{display:none}
+.reveal,.hero__title .line>span,.hero__eyebrow,.hero__lead,.hero__actions,.hero__scroll{opacity:1;transform:none;animation:none}</style></noscript>
 </head>
-<body>
+<body class="is-loading">
 
 <!-- ───────────────── 상단 고정 바 ───────────────── -->
 <header class="topbar" id="topbar">
@@ -30,25 +32,32 @@
   </button>
 </header>
 
+<!-- ───────────────── 입장 연출 ───────────────── -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <span class="curtain__line"></span>
+</div>
+
 <!-- ───────────────── HERO : 명예의전당 ───────────────── -->
 <section class="hero" id="hero">
-  <div class="hero__bg" role="img" aria-label="울산박물관 아너 소사이어티 명예의전당">
-    <div class="hero__colonnade" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
+  <div class="hero__bg" role="img" aria-label="울산박물관에 설치된 울산 아너 소사이어티 아너 명예의전당">
+    <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__vignette" aria-hidden="true"></div>
   </div>
 
   <div class="hero__inner">
-    <p class="hero__eyebrow">울산박물관 명예의전당</p>
+    <p class="hero__eyebrow"><span class="fruit" aria-hidden="true"></span>울산박물관 · 아너 명예의전당</p>
+
     <h1 class="hero__title">
-      이름을 남기는 일이 아니라<br>
-      <em>이웃을 남기는 일</em>입니다
+      <span class="line"><span>당신의 이름이</span></span>
+      <span class="line"><span>세상을 바꿉니다</span></span>
     </h1>
+
     <p class="hero__lead">
-      울산의 아너 소사이어티는 한 사람의 결심에서 시작됩니다.<br>
-      그 결심이 어떻게 기록되고, 어떻게 이어져 왔는지를 이곳에 모았습니다.
+      울산 아너 소사이어티는<br>
+      나눔으로 세상을 바꾼 사람들의 숭고한 이름을 기념하고<br>
+      그 가치를 영원히 기리는 <strong>대한민국 최초의 명예의 전당</strong>입니다.
     </p>
+
     <div class="hero__actions">
       <a class="btn btn--gold" href="#archive">울산 회원 기록 보기</a>
       <a class="btn btn--ghost" href="#join">가입 절차 알아보기</a>
@@ -61,11 +70,48 @@
   </div>
 </section>
 
+<!-- ───────────────── 명예의전당의 의미 ───────────────── -->
+<section class="hall">
+  <div class="hall__inner">
+    <div class="hall__marks">
+      <article class="mark reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
+          <path d="M24 6 L42 15 H6 Z"/><rect x="11" y="19" width="4" height="16"/>
+          <rect x="22" y="19" width="4" height="16"/><rect x="33" y="19" width="4" height="16"/>
+          <rect x="7" y="38" width="34" height="4"/>
+        </svg>
+        <p>전국 최초<br>시립박물관에 고액기부자<br>명예의 전당 설치</p>
+      </article>
+      <article class="mark reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
+          <circle cx="18" cy="16" r="7"/><circle cx="33" cy="19" r="5.5"/>
+          <path d="M6 42c0-7 5.4-12 12-12s12 5 12 12z"/><path d="M31 30c6 0 11 4.6 11 12H34"/>
+        </svg>
+        <p>나눔을 실천한<br>아너들의 이름을<br>영원히</p>
+      </article>
+      <article class="mark reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
+          <path d="M24 5 l5.8 11.8 13 1.9-9.4 9.2 2.2 13-11.6-6.1-11.6 6.1 2.2-13-9.4-9.2 13-1.9z"/>
+        </svg>
+        <p>별보다 더 많은<br>이끄는 숭고한<br>울림</p>
+      </article>
+    </div>
+
+    <div class="hall__words reveal">
+      <p class="hall__tagline">오늘의 나눔이, 내일의 역사가 됩니다</p>
+      <p class="hall__sub">
+        울산 아너 소사이어티는 나눔의 가치를 지키고, 더 큰 세상을 만들어갑니다.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ───────────────── 한 줄 선언 ───────────────── -->
 <section class="statement reveal">
   <p class="statement__text">
     2007년 12월, 국내 최초의 개인 고액기부자 모임이 시작되었습니다.<br>
-    <strong>아너 소사이어티</strong>는 그 이름의 무게를 사회가 함께 기억하기 위한 약속입니다.
+    <strong>아너 소사이어티</strong>는 그 이름의 무게를<br class="br-m">
+    사회가 함께 기억하기 위한 약속입니다.
   </p>
 </section>
 

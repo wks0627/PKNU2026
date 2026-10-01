@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    main.js — 데이터 렌더링 + 상호작용
    외부 라이브러리 없음. 파일을 더블클릭해도 그대로 동작합니다.
    ========================================================= */
@@ -8,6 +8,37 @@
   var D = window.HONOR_DATA || {};
   var $  = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ── 입장 연출 ───────────────────────────────────── */
+  function initCurtain() {
+    var curtain = $('#curtain');
+    var unlock = function () { document.body.classList.remove('is-loading'); };
+
+    var reduced = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!curtain || reduced) {
+      if (curtain) curtain.classList.add('is-done');
+      unlock();
+      return;
+    }
+
+    // 커튼이 올라간 뒤 완전히 제거 (애니메이션이 막히더라도 안전하게 해제)
+    var done = false;
+    var finish = function () {
+      if (done) return;
+      done = true;
+      curtain.classList.add('is-done');
+      unlock();
+    };
+    curtain.addEventListener('animationend', function (e) {
+      if (e.animationName === 'curtainLift') finish();
+    });
+    setTimeout(finish, 3200);
+
+    // 클릭하면 연출을 건너뜁니다
+    curtain.addEventListener('click', finish);
+  }
 
   /* ── 상단 바 ─────────────────────────────────────── */
   function initTopbar() {
@@ -170,7 +201,7 @@
         fill: '#15110e', stroke: '#b8945a', 'stroke-width': 2 }));
       g.appendChild(el('text', {
         x: p[0], y: p[1] - 16, 'text-anchor': 'middle', fill: '#2a241e',
-        'font-size': 14, 'font-family': 'Gowun Batang, serif', 'font-weight': 700
+        'font-size': 14, 'font-family': 'Noto Serif KR, serif', 'font-weight': 700
       }, r.members));
       g.appendChild(el('title', {}, r.year + '년 말 누적 ' + r.members + '명 (신규 ' + r.newMembers + '명)'));
       svg.appendChild(g);
@@ -201,7 +232,7 @@
       }));
       g.appendChild(el('text', {
         x: x + bw / 2, y: y - 12, 'text-anchor': 'middle', fill: '#2a241e',
-        'font-size': 14, 'font-family': 'Gowun Batang, serif', 'font-weight': 700
+        'font-size': 14, 'font-family': 'Noto Serif KR, serif', 'font-weight': 700
       }, r.amount));
       g.appendChild(el('title', {}, r.year + '년 신규 약정 ' + r.amount + '억원'));
       svg.appendChild(g);
@@ -297,6 +328,7 @@
 
   /* ── 시작 ────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
+    initCurtain();
     initTopbar();
     renderNational();
     renderTimeline();
