@@ -1,452 +1,420 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>우길산 | 울산 아너 소사이어티</title>
-<meta name="description" content="울산사회복지공동모금회 모금사업팀 개인모금 파트장 우길산 — 아너 소사이어티 안내, 울산 명예의전당, 나눔의 결과와 기록 아카이브">
+<title>울산 아너 소사이어티 아카이브</title>
+<meta name="description" content="울산사회복지공동모금회 모금사업팀 개인모금 파트장 우길산 — 아너 소사이어티 상담 자료 아카이브">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<noscript><style>body.is-loading{overflow:auto}.curtain,.progress,.dots{display:none}
-.reveal,.hero__title .line>span,.hero__eyebrow,.hero__lead,.hero__actions,.hero__scroll{opacity:1;transform:none;animation:none}</style></noscript>
+<noscript><style>
+  .view{display:block!important}.reveal{opacity:1!important;transform:none!important}
+</style></noscript>
 </head>
-<body class="is-loading">
+<body>
 
 <div class="progress" id="progress" aria-hidden="true"><span></span></div>
 
-<!-- ───────────────── 상단 고정 바 ───────────────── -->
+<!-- ═══════════════ 상단 바 ═══════════════ -->
 <header class="topbar" id="topbar">
-  <a class="topbar__brand" href="#hero" aria-label="사랑의열매 울산사회복지공동모금회">
-    <svg class="logo" viewBox="0 0 150 44" aria-hidden="true">
-      <g class="logo__berries">
-        <circle cx="21"   cy="12"   r="7.6"/>
-        <circle cx="10.6" cy="19.4" r="7.6"/>
-        <circle cx="31.4" cy="19.4" r="7.6"/>
-      </g>
-      <g class="logo__leaves">
-        <path d="M21 25.5c-5.6 0-9.6 2.2-11.9 6.2 4.6 1.4 8.6.2 11.9-3.6"/>
-        <path d="M21 25.5c5.6 0 9.6 2.2 11.9 6.2-4.6 1.4-8.6.2-11.9-3.6"/>
-        <path d="M21 26v10.5"/>
-      </g>
-      <text class="logo__word" x="46" y="21">사랑의열매</text>
-      <text class="logo__sub"  x="46" y="34">울산사회복지공동모금회</text>
-    </svg>
+  <a class="brand" href="#home" aria-label="사랑의열매 사회복지공동모금회">
+    <img class="brand__logo" src="assets/img/logo.png" alt="사랑의열매 사회복지공동모금회">
+    <span class="brand__divider" aria-hidden="true"></span>
+    <span class="brand__text">
+      <strong>울산 아너 소사이어티</strong>
+      <em>ARCHIVE</em>
+    </span>
   </a>
-  <nav class="topbar__nav">
-    <a href="#honor">아너 소개</a>
-    <a href="#join">가입 안내</a>
-    <a href="#impact">나눔의 결과</a>
-    <a href="#wall">명예의전당</a>
-    <a href="#archive">기록·소식</a>
-    <a href="#person">담당자</a>
-    <a class="topbar__cta" href="#contact">상담 문의</a>
+
+  <nav class="mainnav" id="mainnav">
+    <a href="#status">현황과 연혁</a>
+    <a href="#hall">명예의전당</a>
+    <a href="#memorial">메모리얼 아너스</a>
+    <a href="#desk">상담 데스크</a>
+    <a href="#news">복지동향</a>
+    <a href="#me">담당자</a>
   </nav>
-  <button class="topbar__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
-    <span></span><span></span><span></span>
+
+  <button class="burger" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span>
   </button>
 </header>
 
-<!-- 스크롤 위치 표시 -->
-<nav class="dots" id="dots" aria-label="섹션 이동"></nav>
+</div>
 
-<!-- ───────────────── 입장 연출 ───────────────── -->
-<div class="curtain" id="curtain" aria-hidden="true"><span class="curtain__line"></span></div>
+<main id="main">
 
-<!-- ───────────────── HERO ───────────────── -->
-<section class="hero" id="hero" data-nav="명예의전당">
-  <img class="hero__poster" src="assets/img/hall-poster.jpg"
-       alt="울산박물관에 설치된 울산 아너 소사이어티 아너 명예의전당 — 당신의 이름이 세상을 바꿉니다">
-
-  <div class="hero__bg" aria-hidden="true">
-    <div class="hero__scrim"></div><div class="hero__vignette"></div>
-  </div>
-
-  <div class="hero__inner">
-    <p class="hero__eyebrow"><span class="fruit" aria-hidden="true"></span>울산박물관 · 아너 명예의전당</p>
-    <h1 class="hero__title">
-      <span class="line"><span>당신의 이름이</span></span>
-      <span class="line"><span>세상을 바꿉니다</span></span>
-    </h1>
-    <p class="hero__lead">
-      울산 아너 소사이어티는<br>
-      나눔으로 세상을 바꾼 사람들의 숭고한 이름을 기념하고<br>
-      그 가치를 영원히 기리는 <strong>대한민국 최초의 명예의 전당</strong>입니다.
-    </p>
-  </div>
-
-  <div class="hero__actions">
-    <a class="btn btn--gold" href="#wall">명예의전당 둘러보기</a>
-    <a class="btn btn--ghost" href="#join">가입 절차 알아보기</a>
-  </div>
-
-  <div class="hero__scroll" aria-hidden="true">
-    <span class="hero__scroll-line"></span><span class="hero__scroll-text">SCROLL</span>
-  </div>
-</section>
-
-<!-- ───────────────── 명예의전당의 의미 ───────────────── -->
-<section class="hall">
-  <div class="hall__inner">
-    <div class="hall__marks">
-      <article class="mark reveal">
-        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
-          <path d="M24 6 L42 15 H6 Z"/><rect x="11" y="19" width="4" height="16"/>
-          <rect x="22" y="19" width="4" height="16"/><rect x="33" y="19" width="4" height="16"/>
-          <rect x="7" y="38" width="34" height="4"/>
-        </svg>
-        <p>전국 최초<br>시립박물관에 고액기부자<br>명예의 전당 설치</p>
-      </article>
-      <article class="mark reveal">
-        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
-          <circle cx="18" cy="16" r="7"/><circle cx="33" cy="19" r="5.5"/>
-          <path d="M6 42c0-7 5.4-12 12-12s12 5 12 12z"/><path d="M31 30c6 0 11 4.6 11 12H34"/>
-        </svg>
-        <p>나눔을 실천한<br>아너들의 이름을<br>영원히</p>
-      </article>
-      <article class="mark reveal">
-        <svg viewBox="0 0 48 48" aria-hidden="true" class="mark__icon">
-          <path d="M24 5 l5.8 11.8 13 1.9-9.4 9.2 2.2 13-11.6-6.1-11.6 6.1 2.2-13-9.4-9.2 13-1.9z"/>
-        </svg>
-        <p>별보다 더 많은<br>이끄는 숭고한<br>울림</p>
-      </article>
+<!-- ═════════════════════════════════════════
+     HOME
+     ═════════════════════════════════════════ -->
+<div class="view is-active" id="view-home">
+  <section class="hero">
+    <div class="hero__frame">
+      <img class="hero__img" src="assets/img/home-brand.jpg"
+           alt="사랑의열매 — 고마워요! 함께해줘서!">
     </div>
-    <div class="hall__words reveal">
-      <p class="hall__tagline">오늘의 나눔이, 내일의 역사가 됩니다</p>
-      <p class="hall__sub">울산 아너 소사이어티는 나눔의 가치를 지키고, 더 큰 세상을 만들어갑니다.</p>
-    </div>
-  </div>
-</section>
+    <div class="hero__scroll" aria-hidden="true"><span></span></div>
+  </section>
 
-<!-- ───────────────── 선언 ───────────────── -->
-<section class="statement reveal">
-  <p class="statement__text">
-    2007년 12월, 국내 최초의 개인 고액기부자 모임이 시작되었습니다.<br>
-    <strong>아너 소사이어티</strong>는 그 이름의 무게를<br class="br-m">
-    사회가 함께 기억하기 위한 약속입니다.
-  </p>
-</section>
-
-<!-- ───────────────── 아너 소사이어티란 ───────────────── -->
-<section class="section section--dark" id="honor" data-nav="아너 소개">
-  <div class="section__head reveal">
-    <p class="kicker">About</p>
-    <h2 class="section__title">아너 소사이어티란</h2>
-    <p class="section__desc">
-      사랑의열매 사회복지공동모금회가 운영하는 개인 고액기부자 모임입니다.
-      기부 금액이 아니라, 기부를 선택한 이유를 기록하는 자리입니다.
-    </p>
-  </div>
-
-  <div class="figures reveal" aria-label="전국 아너 소사이어티 현황">
-    <div class="figures__grid figures__grid--dark" id="nationalFigures"></div>
-    <p class="figures__note" id="nationalNote"></p>
-  </div>
-
-  <div class="pillars" id="pillars"></div>
-
-  <div class="timeline reveal">
-    <h3 class="timeline__title">연혁</h3>
-    <ol class="timeline__list" id="timeline"></ol>
-  </div>
-</section>
-
-<!-- ───────────────── 가입 안내 ───────────────── -->
-<section class="section" id="join" data-nav="가입 안내">
-  <div class="section__head reveal">
-    <p class="kicker">Before you decide</p>
-    <h2 class="section__title">가입을 고민하신다면</h2>
-    <p class="section__desc">
-      결정에 앞서 요건과 절차, 세제 혜택을 먼저 확인하십시오.
-      읽어보신 뒤 편하실 때 연락 주시면 됩니다.
-    </p>
-  </div>
-
-  <div class="ways reveal" id="ways"></div>
-
-  <div class="steps reveal">
-    <h3 class="steps__title">가입 절차</h3>
-    <ol class="steps__list" id="joinSteps"></ol>
-  </div>
-
-  <div class="taxbox reveal">
-    <h3 class="steps__title">세액공제 · 기부금영수증</h3>
-    <dl class="taxbox__list" id="taxList"></dl>
-    <p class="taxbox__note" id="taxNote"></p>
-  </div>
-</section>
-
-<!-- ───────────────── 나눔의 결과 ───────────────── -->
-<section class="section section--dark" id="impact" data-nav="나눔의 결과">
-  <div class="section__head reveal">
-    <p class="kicker">Impact</p>
-    <h2 class="section__title">나눔의 결과</h2>
-    <p class="section__desc">
-      모인 돈이 어디로 갔는지를 먼저 보여드립니다.
-      기부를 결정하기 전에 확인하셔야 할 것은 이쪽이라고 생각합니다.
-    </p>
-  </div>
-
-  <div class="impact reveal">
-    <div class="impact__chart">
-      <p class="archive__caption">연도별 배분 총액 (억원) · 지원 기관 수</p>
-      <div class="chart" id="chartImpact"></div>
-    </div>
-
-    <div class="impact__fields">
-      <p class="archive__caption">배분 분야 비중</p>
-      <ul class="bars" id="impactFields"></ul>
-    </div>
-  </div>
-
-  <div class="programs" id="impactPrograms"></div>
-  <p class="archive__source archive__source--dark" id="impactSource"></p>
-</section>
-
-<!-- ───────────────── 예우 프로그램 ───────────────── -->
-<section class="section" id="benefits" data-nav="예우 프로그램">
-  <div class="section__head reveal">
-    <p class="kicker">Recognition</p>
-    <h2 class="section__title">예우 프로그램</h2>
-    <p class="section__desc">
-      예우는 보상이 아니라 기록입니다. 모든 항목은 기부자께서
-      받으실지 말지를 직접 정하실 수 있습니다.
-    </p>
-  </div>
-  <div class="benefits" id="benefitsGrid"></div>
-  <div class="benefits__report reveal" id="benefitsReport"></div>
-</section>
-
-<!-- ───────────────── 명패 월 ───────────────── -->
-<section class="section section--wall" id="wall" data-nav="명예의전당">
-  <div class="section__head reveal">
-    <p class="kicker">Donor Wall</p>
-    <h2 class="section__title">울산 아너 명예의전당</h2>
-    <p class="section__desc">
-      울산박물관 1층에 설치된 명패 벽을 그대로 옮겼습니다.
-      한 장의 황동 명패는 한 사람의 결심입니다.
-    </p>
-  </div>
-
-  <div class="wallbox reveal">
-    <div class="wallbox__bar">
-      <div class="wallbox__search">
-        <input type="search" id="wallSearch" placeholder="호수 또는 연도로 찾기 (예: 120, 2024)"
-               aria-label="명패 검색" autocomplete="off">
+  <!-- 아너 소사이어티 안내 영상 -->
+  <section class="block block--film">
+    <div class="wrap">
+      <p class="label reveal">Guide Film</p>
+      <h2 class="h2 reveal">아너 소사이어티 안내 영상</h2>
+      <div class="player reveal" id="player"
+           data-yt="MoSUxTgNmak"
+           data-title="아너 소사이어티 안내 영상">
       </div>
-      <div class="wallbox__filters" id="wallFilters" role="group" aria-label="연도 필터"></div>
-      <p class="wallbox__count" id="wallCount"></p>
+      <p class="note" id="playerNote"></p>
     </div>
+  </section>
 
-    <div class="wallbox__frame">
-      <div class="wallbox__plaque">
-        <span class="fruit" aria-hidden="true"></span>
-        <strong>울산 아너 소사이어티</strong>
-        <em>HONOR SOCIETY</em>
-        <p>
-          울산 아너 소사이어티는 나눔의 가치를 지키고
-          사회적 책임의식과 1% 이상 기부를 바탕으로
-          깊이 있는 사랑을 통해 더 밝은 내일을 여는
-          사랑의 실천입니다. 1억원 이상 개인 고액
-          기부자분들의 모임입니다.
-        </p>
-        <span class="wallbox__date">2026. 03. 30</span>
-        <span class="wallbox__org">울산사회복지공동모금회</span>
+  <!-- 빠른 진입 -->
+  <section class="block">
+    <div class="wrap">
+      <p class="label reveal">Quick access</p>
+      <div class="gates" id="gates"></div>
+    </div>
+  </section>
+
+  <!-- 한눈에 -->
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">한눈에</h2>
+      <div class="figures reveal" id="homeFigures"></div>
+      <p class="note reveal" id="homeFiguresNote"></p>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════════════════════════════════
+     01 현황과 연혁
+     ═════════════════════════════════════════ -->
+<div class="view" id="view-status">
+  <header class="phead"><div class="wrap">
+    <p class="label">01 — Status</p>
+    <h1 class="phead__title">현황과 연혁</h1>
+    <div id="cover-status"></div>
+  </div></header>
+
+  <!-- 아너 소사이어티란 -->
+  <section class="block creed-block">
+    <div class="wrap">
+      <h2 class="h2 reveal">아너 소사이어티란?</h2>
+      <p class="creed__headline reveal" id="honorHeadline"></p>
+      <div class="creed__intro reveal" id="honorIntro"></div>
+      <blockquote class="creed__quote reveal" id="honorCreed"></blockquote>
+      <p class="definition reveal" id="honorDefinition"></p>
+      <dl class="deflist reveal" id="requirements"></dl>
+    </div>
+  </section>
+
+  <!-- 걸어온 길 -->
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">걸어온 길</h2>
+      <ol class="timeline" id="history"></ol>
+    </div>
+  </section>
+
+  <!-- 울산 현황 -->
+  <section class="block">
+    <div class="wrap">
+      <h2 class="h2 reveal">울산 현황</h2>
+      <div class="tabbed reveal" id="ulsanTabs">
+        <div class="tabs" role="tablist" aria-label="울산 현황">
+          <button class="tab is-active" role="tab" data-panel="p-members" aria-selected="true">누적 회원</button>
+          <button class="tab" role="tab" data-panel="p-amount" aria-selected="false">신규 약정</button>
+          <button class="tab" role="tab" data-panel="p-ledger" aria-selected="false">원장</button>
+        </div>
+        <div class="panel is-active" id="p-members"><div class="chart" id="chartMembers"></div></div>
+        <div class="panel" id="p-amount"><div class="chart" id="chartAmount"></div></div>
+        <div class="panel" id="p-ledger"><div class="tablewrap"><table class="ledger" id="ledger"></table></div></div>
+        <p class="note" id="ulsanNote"></p>
       </div>
-      <div class="wallbox__grid" id="wallGrid" aria-live="polite"></div>
     </div>
+  </section>
 
-    <p class="wallbox__note" id="wallNote"></p>
-  </div>
-</section>
-
-<!-- ───────────────── 추모 아카이브 ───────────────── -->
-<section class="section section--memorial" id="memorial" data-nav="추모">
-  <div class="section__head section__head--center reveal">
-    <p class="kicker kicker--center">Memorial Honors</p>
-    <h2 class="section__title">추모의 벽</h2>
-    <p class="section__desc section__desc--center" id="memorialLead"></p>
-  </div>
-  <div class="memorial" id="memorialList"></div>
-</section>
-
-<!-- ───────────────── 나눔 스토리 ───────────────── -->
-<section class="section" id="stories" data-nav="나눔 스토리">
-  <div class="section__head reveal">
-    <p class="kicker">Stories</p>
-    <h2 class="section__title">나눔 스토리</h2>
-    <p class="section__desc">
-      기부를 결심한 계기는 저마다 다릅니다.
-      공개에 동의해 주신 회원들의 이야기를 그대로 싣습니다.
-    </p>
-  </div>
-  <div class="stories" id="storiesList"></div>
-</section>
-
-<!-- ───────────────── 울산 기록관 ───────────────── -->
-<section class="section section--archive" id="archive" data-nav="울산 기록관">
-  <div class="section__head reveal">
-    <p class="kicker">Archive</p>
-    <h2 class="section__title">울산 아너 소사이어티 기록관</h2>
-    <p class="section__desc">
-      울산 지역의 가입 현황과 약정 추이를 연도별로 열람하실 수 있습니다.
-      결정에 참고가 되도록, 해석 없이 기록만 둡니다.
-    </p>
-  </div>
-
-  <div class="archive reveal">
-    <div class="archive__tabs" role="tablist" aria-label="기록 분류">
-      <button class="archive__tab is-active" role="tab" data-panel="panel-members" aria-selected="true">가입 현황</button>
-      <button class="archive__tab" role="tab" data-panel="panel-amount" aria-selected="false">약정 금액 추이</button>
-      <button class="archive__tab" role="tab" data-panel="panel-table" aria-selected="false">연도별 원장</button>
+  <!-- 회원 예우 -->
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">회원 예우</h2>
+      <div class="cards" id="benefits"></div>
     </div>
+  </section>
 
-    <div class="archive__panel is-active" id="panel-members" role="tabpanel">
-      <p class="archive__caption">울산 누적 회원 수 (연도 말 기준)</p>
-      <div class="chart" id="chartMembers"></div>
+  <!-- 연간 일정 -->
+  <section class="block">
+    <div class="wrap">
+      <h2 class="h2 reveal">연간 일정</h2>
+      <ol class="cal" id="calendarList"></ol>
+      <p class="note reveal" id="calendarNote"></p>
     </div>
-    <div class="archive__panel" id="panel-amount" role="tabpanel">
-      <p class="archive__caption">울산 연간 신규 약정 금액 (억원)</p>
-      <div class="chart" id="chartAmount"></div>
+  </section>
+
+  <!-- 공식 진행 절차 -->
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">공식 진행 절차</h2>
+      <ol class="steps" id="process"></ol>
     </div>
-    <div class="archive__panel" id="panel-table" role="tabpanel">
-      <p class="archive__caption">연도별 기록 원장</p>
-      <div class="archive__tablewrap"><table class="ledger" id="ledger"></table></div>
+  </section>
+
+</div>
+
+<!-- ═════════════════════════════════════════
+     02 명예의전당
+     ═════════════════════════════════════════ -->
+<div class="view view--dark" id="view-hall">
+  <!-- 울산박물관 명예의전당 -->
+  <section class="banner banner--hall">
+    <img class="banner__img" src="assets/img/hall-poster.jpg"
+         alt="울산박물관에 설치된 울산 아너 소사이어티 아너 명예의전당 — 당신의 이름이 세상을 바꿉니다">
+  </section>
+
+  <header class="phead phead--dark"><div class="wrap">
+    <p class="label">02 — Hall of Honor</p>
+    <h1 class="phead__title">울산 아너 명예의전당</h1>
+  </div></header>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="searchbar searchbar--dark reveal">
+        <input type="search" id="hallQ" placeholder="호수 또는 성함으로 찾기 (예: 42, 홍)" aria-label="명패 검색" autocomplete="off">
+        <span class="searchbar__count" id="hallCount"></span>
+      </div>
+      <div class="chips" id="hallFilters"></div>
+
+      <div class="wall wall--gold">
+        <div class="wall__grid" id="hallGrid" aria-live="polite"></div>
+      </div>
     </div>
+  </section>
+</div>
 
-    <p class="archive__source" id="archiveSource"></p>
-  </div>
-</section>
-
-<!-- ───────────────── 소식 ───────────────── -->
-<section class="section section--dark" id="news" data-nav="소식">
-  <div class="section__head reveal">
-    <p class="kicker">News</p>
-    <h2 class="section__title">아너 기부 보도자료 · 복지동향</h2>
-    <p class="section__desc">
-      울산과 전국의 아너 소식, 그리고 참고할 만한 복지 분야 동향을 모읍니다.
-    </p>
+<!-- ═════════════════════════════════════════
+     03 메모리얼 아너스
+     ═════════════════════════════════════════ -->
+<div class="view view--memorial" id="view-memorial">
+  <div class="memorial-bg" aria-hidden="true">
+    <span class="memorial-bg__img"></span>
+    <span class="memorial-bg__veil"></span>
+    <span class="memorial-bg__light"></span>
   </div>
 
-  <div class="news reveal">
-    <div class="archive__tabs archive__tabs--dark" role="tablist" aria-label="소식 분류">
-      <button class="archive__tab is-active" role="tab" data-panel="panel-news-honor" aria-selected="true">아너 기부 보도자료</button>
-      <button class="archive__tab" role="tab" data-panel="panel-news-welfare" aria-selected="false">복지동향</button>
+  <header class="phead phead--dark phead--mum"><div class="wrap">
+    <!-- 흰 국화 — 추모의 뜻 -->
+    <svg class="mum" viewBox="0 0 400 400" aria-hidden="true">
+      <defs>
+        <radialGradient id="mumGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity=".30"/>
+          <stop offset="55%" stop-color="#e8edf3" stop-opacity=".08"/>
+          <stop offset="100%" stop-color="#e8edf3" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="200" cy="200" r="190" fill="url(#mumGlow)"/>
+      <g class="mum__petals" fill="none" stroke="#eef2f7" stroke-linecap="round">
+        <g class="mum__ring mum__ring--1"></g>
+        <g class="mum__ring mum__ring--2"></g>
+        <g class="mum__ring mum__ring--3"></g>
+      </g>
+      <circle class="mum__core" cx="200" cy="200" r="20" fill="#f4f7fb" opacity=".55"/>
+    </svg>
+
+    <p class="label">03 — Memorial Honors</p>
+    <h1 class="phead__title">메모리얼 아너스</h1>
+    <p class="phead__lead" id="memorialLead"></p>
+  </div></header>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="searchbar searchbar--dark reveal">
+        <input type="search" id="memQ" placeholder="호수 또는 성함으로 찾기" aria-label="추모 명패 검색" autocomplete="off">
+        <span class="searchbar__count" id="memCount"></span>
+      </div>
+      <div class="chips" id="memFilters"></div>
+
+      <div class="wall wall--silver">
+        <div class="wall__grid" id="memGrid" aria-live="polite"></div>
+      </div>
     </div>
-    <div class="archive__panel is-active" id="panel-news-honor" role="tabpanel">
-      <ul class="newslist" id="newsHonor"></ul>
+  </section>
+</div>
+
+<!-- ═════════════════════════════════════════
+     04 상담 데스크
+     ═════════════════════════════════════════ -->
+<div class="view" id="view-desk">
+  <header class="phead"><div class="wrap">
+    <p class="label">04 — Desk</p>
+    <h1 class="phead__title">상담 데스크</h1>
+    <div id="cover-desk"></div>
+  </div></header>
+
+  <section class="block">
+    <div class="wrap">
+      <h2 class="h2 reveal">진행 체크리스트</h2>
+      <p class="note reveal"><button class="linkbtn" id="checkReset">전체 해제</button></p>
+      <div class="checks" id="checks"></div>
     </div>
-    <div class="archive__panel" id="panel-news-welfare" role="tabpanel">
-      <ul class="newslist" id="newsWelfare"></ul>
+  </section>
+
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">자주 막히는 지점</h2>
+      <div class="objs" id="objections"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ───────────────── 연간 일정 ───────────────── -->
-<section class="section" id="calendar" data-nav="연간 일정">
-  <div class="section__head reveal">
-    <p class="kicker">Calendar</p>
-    <h2 class="section__title">연간 일정</h2>
-    <p class="section__desc" id="calendarLead"></p>
-  </div>
-  <ol class="cal" id="calendarList"></ol>
-  <p class="archive__source" id="calendarNote"></p>
-</section>
-
-<!-- ───────────────── 자료실 ───────────────── -->
-<section class="section section--dark" id="downloads" data-nav="자료실">
-  <div class="section__head reveal">
-    <p class="kicker">Documents</p>
-    <h2 class="section__title">자료실</h2>
-    <p class="section__desc" id="downloadsNote"></p>
-  </div>
-  <div class="files" id="filesList"></div>
-</section>
-
-<!-- ───────────────── 유산기부 ───────────────── -->
-<section class="section" id="legacy" data-nav="유산기부">
-  <div class="section__head reveal">
-    <p class="kicker">Legacy Giving</p>
-    <h2 class="section__title">유산기부 안내</h2>
-    <p class="section__desc" id="legacyLead"></p>
-  </div>
-  <div class="legacy__types" id="legacyTypes"></div>
-  <div class="steps reveal">
-    <h3 class="steps__title">상담 절차</h3>
-    <ol class="steps__list" id="legacySteps"></ol>
-  </div>
-  <p class="legacy__caution reveal" id="legacyCaution"></p>
-</section>
-
-<!-- ───────────────── FAQ ───────────────── -->
-<section class="section section--archive" id="faq" data-nav="자주 묻는 질문">
-  <div class="section__head reveal">
-    <p class="kicker">FAQ</p>
-    <h2 class="section__title">자주 묻는 질문</h2>
-    <p class="section__desc">
-      약정 변경, 기명과 익명, 분할납부 — 가장 많이 받는 질문을 모았습니다.
-    </p>
-  </div>
-  <div class="faq reveal"><div class="faq__list" id="faqList"></div></div>
-</section>
-
-<!-- ───────────────── 담당자 ───────────────── -->
-<section class="section section--dark" id="person" data-nav="담당자">
-  <div class="person">
-    <figure class="person__photo reveal">
-      <img src="assets/img/profile.jpg" alt="" id="profileImg">
-      <figcaption id="profileCaption"></figcaption>
-    </figure>
-    <div class="person__body reveal">
-      <p class="kicker">Your contact</p>
-      <h2 class="section__title" id="profileTitle"></h2>
-      <div id="profileGreeting"></div>
-      <dl class="person__meta" id="profileMeta"></dl>
+  <section class="block">
+    <div class="wrap">
+      <h2 class="h2 reveal">약정 계산기</h2>
+      <div class="calc reveal">
+        <div class="calc__controls">
+          <div class="field">
+            <label for="calcTotal">약정 총액</label>
+            <input type="number" id="calcTotal" step="10000000" min="100000000">
+            <span class="field__hint" id="calcTotalHint"></span>
+          </div>
+          <div class="field">
+            <label for="calcYears">납입 기간 (년)</label>
+            <input type="number" id="calcYears" min="1" max="5">
+            <span class="field__hint">최대 5년</span>
+          </div>
+          <div class="field">
+            <label for="calcFirst">최초 가입금액</label>
+            <input type="number" id="calcFirst" step="1000000">
+            <span class="field__hint" id="calcFirstHint"></span>
+          </div>
+          <div class="chips" id="calcPresets"></div>
+        </div>
+        <div class="calc__out" id="calcOut"></div>
+      </div>
+      <div class="tablewrap reveal"><table class="ledger" id="calcSchedule"></table></div>
+      <p class="note reveal" id="calcTaxNote"></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ───────────────── 문의 ───────────────── -->
-<section class="contact" id="contact" data-nav="문의">
-  <div class="contact__inner reveal">
-    <p class="kicker kicker--center">Contact</p>
-    <h2 class="contact__title">먼저 이야기부터 들려주십시오</h2>
-    <p class="contact__lead" id="contactLead"></p>
-    <div class="contact__cards" id="contactCards"></div>
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="h2 reveal">질문 찾기</h2>
+      <div class="searchbar reveal">
+        <input type="search" id="faqQ" placeholder="질문 또는 답변에서 찾기 (예: 익명, 분할, 영수증)" aria-label="질문 검색" autocomplete="off">
+        <span class="searchbar__count" id="faqCount"></span>
+      </div>
+      <div class="faq" id="faqList"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2 class="h2 reveal">서식</h2>
+      <div class="shelf" id="formsList"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════════════════════════════════
+     05 복지동향
+     ═════════════════════════════════════════ -->
+<div class="view" id="view-news">
+  <header class="phead"><div class="wrap">
+    <p class="label">05 — News</p>
+    <h1 class="phead__title">복지동향</h1>
+    <div id="cover-news"></div>
+  </div></header>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="searchbar reveal">
+        <input type="search" id="newsQ" placeholder="제목·언론사로 찾기" aria-label="기사 검색" autocomplete="off">
+        <span class="searchbar__count" id="newsCount"></span>
+      </div>
+      <div class="chips" id="newsScopes"></div>
+      <ul class="newslist" id="newsList"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════════════════════════════════
+     06 담당자
+     ═════════════════════════════════════════ -->
+<div class="view" id="view-me">
+  <header class="phead"><div class="wrap">
+    <p class="label">06 — Contact</p>
+    <h1 class="phead__title">담당자</h1>
+  </div></header>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="person">
+        <figure class="person__photo reveal">
+          <img src="assets/img/profile.jpg" alt="" id="profileImg">
+          <figcaption id="profileCaption"></figcaption>
+        </figure>
+        <div class="reveal">
+          <h2 class="h2" id="profileTitle"></h2>
+          <div id="profileGreeting"></div>
+          <dl class="deflist deflist--tight" id="profileMeta"></dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap contact__inner reveal">
+      <p class="label label--center">Contact</p>
+      <h2 class="contact__title">먼저 이야기부터 들려주십시오</h2>
+      <p class="contact__lead" id="contactLead"></p>
+      <div class="contact__cards" id="contactCards"></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- 명패 상세 -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__scrim" data-close></div>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="sheet__close" data-close aria-label="닫기">×</button>
+    <div id="sheetBody"></div>
   </div>
-</section>
+</div>
 
 <footer class="footer">
-  <div class="footer__inner">
+  <div class="wrap">
+    <img class="footer__logo" src="assets/img/logo.png" alt="사랑의열매 사회복지공동모금회">
     <p class="footer__org">울산사회복지공동모금회 모금사업팀 · 개인모금 파트장 우길산</p>
     <p class="footer__note">
-      본 페이지는 담당자 소개 및 기부 상담 안내를 위한 비상업적 업무용 자료입니다.
-      수치는 사랑의열매 공개 자료를 인용하였으며, 공식 통계는 사랑의열매 누리집을 확인해 주십시오.
+      담당자 개인 업무용 상담 보조 자료입니다. 비상업적 용도로만 사용합니다.
       회원·유족의 성함과 사진은 본인 또는 유족의 공개 동의를 받은 경우에만 게시합니다.
+      수치는 사랑의열매 공개 자료와 내부 자료를 인용하였으며, 공식 통계는 사랑의열매 누리집을 확인하십시오.
     </p>
-    <p class="footer__links"><a href="https://chest.or.kr" target="_blank" rel="noopener">사랑의열매 사회복지공동모금회</a></p>
+    <p class="footer__links">
+      <a href="https://chest.or.kr/ct/cntrpt/initHonorsociety.do" target="_blank" rel="noopener">아너 소사이어티 공식 안내</a>
+      <a href="https://archives.chest.or.kr" target="_blank" rel="noopener">사랑의열매 기록관</a>
+    </p>
   </div>
 </footer>
 
 <button class="totop" id="toTop" aria-label="맨 위로">↑</button>
 
-<!-- 데이터 — _init.js 가 가장 먼저 읽혀야 합니다 -->
 <script src="data/_init.js"></script>
 <script src="data/profile.js"></script>
-<script src="data/about-honor.js"></script>
-<script src="data/impact.js"></script>
-<script src="data/benefits.js"></script>
-<script src="data/stories.js"></script>
-<script src="data/news-honor.js"></script>
-<script src="data/news-welfare.js"></script>
+<script src="data/honor.js"></script>
+<script src="data/desk.js"></script>
+<script src="data/hall.js"></script>
+<script src="data/memorial.js"></script>
+<script src="data/stats.js"></script>
+<script src="data/library.js"></script>
+<script src="data/covers.js"></script>
 <script src="data/calendar.js"></script>
-<script src="data/downloads.js"></script>
-<script src="data/legacy.js"></script>
 <script src="data/faq.js"></script>
 <script src="data/contact.js"></script>
-<script src="data/memorial.js"></script>
-<script src="data/archive.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
