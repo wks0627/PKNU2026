@@ -1,3 +1,4 @@
+﻿window.HONOR = window.HONOR || {};
 /* FAQ — 약정 변경, 기명/익명, 분할납부 등 */
 HONOR.faq = {
   list: [

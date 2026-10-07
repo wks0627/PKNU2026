@@ -1,3 +1,4 @@
+﻿window.HONOR = window.HONOR || {};
 /* 소개 — 담당자 인사말, 사진, 소속·역할 */
 HONOR.profile = {
   name: "우길산",

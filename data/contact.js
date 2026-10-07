@@ -1,3 +1,4 @@
+﻿window.HONOR = window.HONOR || {};
 /* 문의 — 담당자 연락처, 상담 신청 */
 HONOR.contact = {
   phone:     "010-3388-0470",

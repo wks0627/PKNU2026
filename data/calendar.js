@@ -1,3 +1,4 @@
+﻿window.HONOR = window.HONOR || {};
 /* 연간 일정 — 총회, 나눔 음악회, 희망나눔캠페인 등
    month 는 숫자(1~12), day 는 비워 두면 "○월 중"으로 표시됩니다. */
 HONOR.calendar = {
