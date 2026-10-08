@@ -174,7 +174,7 @@
   };
 
   var drawn = {};
-  var showView = function (id, first) {
+  var showView = function (id) {
     $$('.view').forEach(function (v) { v.classList.remove('is-active'); });
     var view = $('#view-' + id);
     if (!view) return;
@@ -184,15 +184,24 @@
       a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
     });
 
-    if (!first) window.scrollTo({ top: 0, behavior: 'auto' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
     observeReveal(view);
     drawCharts(id);
     syncChrome();
   };
 
   var initRouter = function () {
+    // 새로고침해도 브라우저가 이전 위치로 되돌리지 않게 합니다
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+    /* 주소창에 #status 같은 지난 흔적이 남아 있어도
+       접속은 언제나 홈에서 시작합니다. */
+    if (location.hash) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+
     window.addEventListener('hashchange', function () { showView(currentView()); });
-    showView(currentView(), true);
+    showView('home');
   };
 
   var topbar, progBar, toTop;
